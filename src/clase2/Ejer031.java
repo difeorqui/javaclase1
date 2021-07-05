@@ -1,28 +1,26 @@
 /*
-Programa que lea dos variables enteras N y m y le quite a N sus m últimas
+Programa que lea dos variables un texto de N caracteres y un número  m y le quite a N sus m últimas
 cifras.
-Por ejemplo, si N = 123456 y m = 2 el nuevo valor de N será 1234
+Por ejemplo, si N = Casita y m = 2 el nuevo valor de N será Casi
  */
 package clase2;
 import java.util.Scanner;
-public class Ejer03 {
+public class Ejer031 {
     public static void main(String[] args) {
         var sc = new Scanner(System.in);        
-        var n = 0;
+        var n = "";
         var m = 0;
         do {
             LimpiarPantalla();
-            System.out.print("Digita una cifra, ej. 12345: ");
-            n = sc.nextInt();
+            System.out.print("Digita una cadena de texto: ");
+            n = sc.nextLine();
             System.out.print("¿cuántas cifras desea eliminar del final?: ");
             m = sc.nextInt();
-        } while (m > (n+"").length());
+        } while (m > n.length());
         sc.close();
 
-        for (int i = 1; i <= m; i++) {
-            n /= 10;
-        }
-        System.out.print("Nueva cifra: "+n);
+        n = n.substring(0, n.length()-m);
+        System.out.print("Nueva texto: "+n);
     }
 
     /**
