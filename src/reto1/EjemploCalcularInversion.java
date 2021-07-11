@@ -3,7 +3,7 @@ package reto1;
 /**
  * CalcularInversion
  */
-public class CalcularInversion {
+public class EjemploCalcularInversion {
 
     // Atributos
     private int tiempo;
@@ -12,14 +12,14 @@ public class CalcularInversion {
 
     // Métodos
     // Constructor
-    public CalcularInversion() {
+    public EjemploCalcularInversion() {
         this.tiempo = 0;
         this.capital = 0.0;
         this.interes = 0.0;
     }
 
     // Constructor sobrecarga
-    public CalcularInversion(Integer tiempo, Double capital, Double interes) {
+    public EjemploCalcularInversion(Integer tiempo, Double capital, Double interes) {
         this.tiempo = tiempo;
         this.capital = capital;
         this.interes = interes;
@@ -67,7 +67,7 @@ public class CalcularInversion {
     }
 
     public static void main(String[] args) {
-        CalcularInversion inversion1 = new CalcularInversion(); // Llama al constructor
+        EjemploCalcularInversion inversion1 = new EjemploCalcularInversion(); // Llama al constructor
         // Aquí todos los parámetros quedarían en cero.
         System.out.println("Capital: " + inversion1.getCapital());
         System.out.println("Interés: " + inversion1.getInteres());
