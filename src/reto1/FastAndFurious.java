@@ -112,7 +112,7 @@ public class FastAndFurious {
         do {
             System.out.print("\nDigite el valor según el tipo de vehículo [0] para Carro o [1] para Moto:");
             tipoNum = sc.nextInt();
-        } while (tipoNum == 0 || tipoNum == 1);
+        } while (tipoNum != 0 && tipoNum != 1);
 
         if(tipoNum == 0) {
             tipo = "Carro";
