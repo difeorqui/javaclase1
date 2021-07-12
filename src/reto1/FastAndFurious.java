@@ -7,18 +7,19 @@ class Vehiculo {
     private boolean disponible;
     private String tipo;
 
+    // Constructor
     public Vehiculo(String tipo) {
         this.tipo = tipo;
     }
-
+    // Get del tipo
     public String getTipo() {
         return tipo;
     }
-
+    // Get disponible
     public boolean isDisponible() {
         return this.disponible;
     }
-
+    // Set disponible
     public void setDisponible(boolean disponible) {
         this.disponible = disponible;
     }
@@ -27,6 +28,7 @@ class Vehiculo {
 
 class Cliente {
     private String nombre;
+    private Alquiler alquiler;
 
     public String getNombre() {
         return nombre;
@@ -39,8 +41,22 @@ class Cliente {
     public Cliente(String nombre) {
         this.nombre = nombre;
     }
-}
 
+    public Alquiler alquilarVehiculo(Integer idAlquiler, Vehiculo vehiculo, Cliente cliente) {
+        this.alquiler = new Alquiler(idAlquiler, vehiculo, cliente);
+        return this.alquiler;
+    }
+
+    public Alquiler devolverVehiculo(Alquiler alquiler) {
+        alquiler.setFechaFinal(new Date());
+        alquiler.getVehiculo().setDisponible(true);
+
+        this.alquiler = alquiler;
+        return this.alquiler;
+    }
+
+
+}
 
 class Alquiler {
     private int idAlquiler;
@@ -91,8 +107,18 @@ public class FastAndFurious {
         var sc = new Scanner(System.in);
         System.out.print("Nombre del cliente:");
         var nombre = sc.nextLine();
-        System.out.print("Selecciona el tipo de vehílo (Carro o Moto):");
-        var tipo = sc.nextLine();
+        int tipoNum = 0;
+        String tipo = "";
+        do {
+            System.out.print("\nDigite el valor según el tipo de vehículo [0] para Carro o [1] para Moto:");
+            tipoNum = sc.nextInt();
+        } while (tipoNum == 0 || tipoNum == 1);
+
+        if(tipoNum == 0) {
+            tipo = "Carro";
+        } else {
+            tipo = "Moto";
+        }
         sc.close();
 
         Vehiculo vehiculo = new Vehiculo(tipo);
@@ -100,18 +126,9 @@ public class FastAndFurious {
         
         int idAlquiler = (int)Math.floor(Math.random()*(9000000-1000000+1)+1000000);
 
-        Alquiler alquiler = alquilarVehiculo(idAlquiler, vehiculo, cliente);
-        alquiler = devolverVehiculo(alquiler);
+        Alquiler alquiler = cliente.alquilarVehiculo(idAlquiler, vehiculo, cliente);
+        alquiler = cliente.devolverVehiculo(alquiler);
 
     }
 
-    public static Alquiler alquilarVehiculo(Integer idAlquiler, Vehiculo vehiculo, Cliente cliente) {
-        Alquiler alquiler = new Alquiler(idAlquiler, vehiculo, cliente);
-        return alquiler;
-    }
-
-    public static Alquiler devolverVehiculo(Alquiler alquiler) {
-        alquiler.setFechaFinal(new Date());
-        return alquiler;
-    }
 }
