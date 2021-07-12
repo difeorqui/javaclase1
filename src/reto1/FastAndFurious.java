@@ -1,5 +1,6 @@
 package reto1;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 
@@ -110,8 +111,13 @@ public class FastAndFurious {
         int tipoNum = 0;
         String tipo = "";
         do {
-            System.out.print("\nDigite el valor según el tipo de vehículo [0] para Carro o [1] para Moto:");
-            tipoNum = sc.nextInt();
+            System.out.print("Digite el valor según el tipo de vehículo [0] para Carro o [1] para Moto:");
+            try {
+                tipoNum = sc.nextInt();
+            } catch (Exception e) {
+                tipoNum = -1; // Obliga a quedarse en el ciclo
+                sc.nextLine();
+            }
         } while (tipoNum != 0 && tipoNum != 1);
 
         if(tipoNum == 0) {
@@ -129,6 +135,12 @@ public class FastAndFurious {
         Alquiler alquiler = cliente.alquilarVehiculo(idAlquiler, vehiculo, cliente);
         alquiler = cliente.devolverVehiculo(alquiler);
 
+        SimpleDateFormat formatear = new SimpleDateFormat("dd-MMM-aaaa hh:mm:ss a");
+        System.out.println("Alquiler No." + alquiler.getIdAlquiler());
+        System.out.println("Cliente:\t" + alquiler.getCliente().getNombre());
+        System.out.println("Fecha:\t\t" + formatear.format(alquiler.getFechaInicial())); 
+        System.out.println("Vehículo:\t" + alquiler.getVehiculo().getTipo());
+        System.out.println("Devolución:\t" + formatear.format(alquiler.getFechaFinal()));
     }
 
 }
