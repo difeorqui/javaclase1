@@ -35,8 +35,7 @@ public class Television extends Electrodomestico{
         if (this.pulgadas > 40) {
             adicion += (super.getPrecioBase() * 0.3);
         }
-        double precioFinal = super.calcularPrecio() + adicion;
-        return precioFinal;
+        return super.calcularPrecio() + adicion;
     } 
 } 
 // Fin de la solución

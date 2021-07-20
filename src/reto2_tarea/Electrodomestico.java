@@ -77,7 +77,7 @@ public class Electrodomestico {
             adicion += 50.0;
         } else if (this.peso >= 49 && this.peso < 80) {
             adicion += 80.0;
-        } else if (this.peso >= 80 ) {
+        } else if (this.peso > 79 ) {
             adicion += 100;
         }
 
