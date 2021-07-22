@@ -1,4 +1,4 @@
-public class CompararRentabilidad {
+public class CompararRentabilidadCasos {
     // ---------------------------------------------
     // Atributos
     // ---------------------------------------------
@@ -11,13 +11,13 @@ public class CompararRentabilidad {
     // ---------------------------------------------
 
     // Constructor
-    public CompararRentabilidad() {
+    public CompararRentabilidadCasos() {
         this.tiempo = 0;
         this.valorProducto = 0;
         this.interes = 0.0;
     }
     
-    public CompararRentabilidad(int pTiempo, int pValorProducto, double pInteres ) {
+    public CompararRentabilidadCasos(int pTiempo, int pValorProducto, double pInteres ) {
         this.tiempo = pTiempo;
         this.valorProducto = pValorProducto;
         this.interes = pInteres;
