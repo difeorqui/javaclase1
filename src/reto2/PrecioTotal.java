@@ -28,6 +28,5 @@ public class PrecioTotal {
         System.out.println("El precio total de los Vehiculos es de " + this.totalVehiculos);
         System.out.println("La suma del precio de los Carros es de  " + this.totalCarros);
         System.out.println("La suma del precio de las Motos es de " + this.totalMotos);
-        System.out.println("\n\n");
     }
 }

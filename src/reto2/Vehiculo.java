@@ -4,12 +4,14 @@ public class Vehiculo {
     private String marca;
     private int modelo;
     private double precioFinal;
+    private int nroLlantas;
 
-    public Vehiculo(double precioBase, boolean lujo, String marca, int modelo) {
+    public Vehiculo(double precioBase, boolean lujo, String marca, int modelo, int nroLlantas) {
         this.precioBase = precioBase;
         this.lujo = lujo;
         this.marca = marca;
         this.modelo = modelo;
+        this.nroLlantas = nroLlantas;
     }
     // Los getters y setters de ser necesario
 
@@ -25,6 +27,9 @@ public class Vehiculo {
     public int getModelo() {
         return modelo;
     }
+    public int getNroLlantas() {
+        return nroLlantas;
+    }
     // Resultados
     public void setPrecioFinal(double precioFinal) {
         this.precioFinal = precioFinal;
@@ -32,7 +37,4 @@ public class Vehiculo {
     public double getPrecioFinal() {
         return precioFinal;
     }
-
-
-
 }

@@ -1,6 +1,16 @@
 public class Moto extends Vehiculo {
     public Moto(double precioBase, boolean lujo, String marca, int modelo) {
-        super(precioBase, lujo, marca, modelo);
+        super(precioBase, lujo, marca, modelo, 2);
+        calcularPrecio();
+    }
+
+    public Moto(double precioBase, boolean lujo, String marca, int modelo, int nroLlantas) {
+        super(precioBase, lujo, marca, modelo, nroLlantas);
+        calcularPrecio();
+    }
+
+    public Moto(double precioBase, boolean lujo, String marca, int modelo, String rin1, String rin2) {
+        super(precioBase, lujo, marca, modelo, 2);
         calcularPrecio();
     }
 
