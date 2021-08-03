@@ -160,3 +160,28 @@ WHERE e.salary NOT IN (2500, 3500, 7000)
 SELECT e.last_name, e.salary, e.salary-j.min_salary as comision
 FROM employees e INNER JOIN jobs j ON e.job_id = j.job_id
 WHERE comision / e.salary >= 0.2
+
+/*
+Escriba una consulta que muestre la calificación de todos los empleados en
+función del valor de la columna JOB_ID, utilizando los siguientes datos:
+Job 							Grade
+Administration Vice President 	A
+Sales Manager 					B
+Programmer 						C
+Sales Representative 			D
+Stock Clerk 					E
+None of the above 				0
+*/
+
+select e.last_name,j.job_title,
+CASE e.job_id 
+	WHEN 5 then 'A'
+	WHEN 15 then 'B'
+	WHEN 9 then 'C'
+	WHEN 16 then 'D'
+	WHEN 18 then 'E'
+	ELSE 'F'
+END as calificacion
+from employees e  inner join jobs j 
+	on e.job_id = j.job_id 
+
