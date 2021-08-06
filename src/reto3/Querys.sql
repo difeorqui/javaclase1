@@ -18,5 +18,34 @@ order by c.ID_Proyecto;
 
 --5.	Se necesita saber el nombre y apellidos del líder del o de los proyecto(s) en los que se debe dinero por la compra de materiales.
 select distinct l.ID_Lider, l.Nombre, l.Primer_Apellido, l.Segundo_Apellido
+from Lider l inner join Proyecto p on p.ID_Lider = l.ID_Lider
+INNER JOIN Compra c on c.ID_Proyecto = p.ID_Proyecto 
+where c.Pagado <> "Si";
+
+--Opción reto
+select distinct l.ID_Lider, l.Nombre, l.Primer_Apellido, l.Segundo_Apellido
 from Lider l inner join Proyecto p on p.ID_Lider = l.ID_Lider;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
