@@ -1,10 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package utp.misiontic2022.c2.utp.misiontic2022.c2.p41.reto4.modelo.dao;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -13,10 +7,6 @@ import java.util.ArrayList;
 import utp.misiontic2022.c2.utp.misiontic2022.c2.p41.reto4.modelo.vo.Requerimiento_2;
 import utp.misiontic2022.c2.utp.misiontic2022.c2.p41.reto4.util.JDBCUtilities;
 
-/**
- *
- * @author Diego_Orozco
- */
 public class Requerimiento2_Dao {
     Connection cnn;
 
@@ -32,7 +22,7 @@ public class Requerimiento2_Dao {
         cnn.close();
     }
     
-    public ArrayList<Requerimiento_2> consultar(){
+    public ArrayList<Requerimiento_2> requerimiento2(){
         ArrayList<Requerimiento_2> res = new ArrayList<>();
         
         String consulta = "select c.ID_Proyecto, c.Proveedor, c.Pagado, mc.ID_MaterialConstruccion, mc.Nombre_Material"+
@@ -58,6 +48,4 @@ public class Requerimiento2_Dao {
         }
         return res;
     }
-    
-    
 }

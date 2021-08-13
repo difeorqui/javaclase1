@@ -14,11 +14,6 @@ import utp.misiontic2022.c2.utp.misiontic2022.c2.p41.reto4.modelo.vo.Requerimien
 import utp.misiontic2022.c2.utp.misiontic2022.c2.p41.reto4.util.Requerimiento1_controller;
 import utp.misiontic2022.c2.utp.misiontic2022.c2.p41.reto4.util.Requerimiento2_controller;
 import utp.misiontic2022.c2.utp.misiontic2022.c2.p41.reto4.util.Requerimiento3_controller;
-
-/**
- *
- * @author Diego_Orozco
- */
 public class VistaRequerimientos {
     Scanner sc;
     
@@ -43,13 +38,13 @@ public class VistaRequerimientos {
             }
             switch (opcion) {
                 case 1:
-                    ejecutarRequerimiento1();
+                    requerimiento1();
                     break;
                 case 2:
-                    ejecutarRequerimiento2();
+                    requerimiento2();
                     break;
                 case 3:
-                    ejecutarRequerimiento3();
+                    requerimiento3();
                     break;
             }
         }
@@ -57,32 +52,32 @@ public class VistaRequerimientos {
         sc.close();
     }
  
-    private void ejecutarRequerimiento1() {
+    public static void requerimiento1() {
         try {
             Requerimiento1_controller ctrl = new Requerimiento1_controller();
-            ArrayList<Requerimiento_1> resultado = ctrl.consultar();
+            ArrayList<Requerimiento_1> resultado = ctrl.requerimiento1();
             ctrl.close();
             System.out.println("Nro_Lideres Ciudad_Residencia");
             for (Requerimiento_1 rq : resultado) {
-                System.out.println(rq.getNro_lideres() + " " + rq.getCiudad_residencia());
+                System.out.println(rq.getNro_lideres() + "  " + rq.getCiudad_residencia());
             }
         } catch (SQLException e) {
             System.err.println("Error: " + e);
         }
     }
 
-    private void ejecutarRequerimiento2() {
+    public static void requerimiento2() {
         try {
             Requerimiento2_controller ctrl = new Requerimiento2_controller();
-            ArrayList<Requerimiento_2> resultado = ctrl.consultar();
+            ArrayList<Requerimiento_2> resultado = ctrl.requerimiento2();
             ctrl.close();
             System.out.println("ID_Proyecto Proveedor Pagado  ID_MaterialConstruccion  Nombre_Material");
             for (Requerimiento_2 rq : resultado) {
                 System.out.println(
-                        rq.getId_proyecto() + " " + 
-                        rq.getProveedor() + " " + 
-                        rq.getPagado() + " " + 
-                        rq.getId_material_construccion() + " " + 
+                        rq.getId_proyecto() + "  " + 
+                        rq.getProveedor() + "  " + 
+                        rq.getPagado() + "  " + 
+                        rq.getId_material_construccion() + "  " + 
                         rq.getNombre_material()
                 );
             }
@@ -91,17 +86,17 @@ public class VistaRequerimientos {
         }
     }
 
-    private void ejecutarRequerimiento3() {
+    public static void requerimiento3() {
         try {
             Requerimiento3_controller ctrl = new Requerimiento3_controller();
-            ArrayList<Requerimiento_3> resultado = ctrl.consultar();
+            ArrayList<Requerimiento_3> resultado = ctrl.requerimiento3();
             ctrl.close();
             System.out.println("ID_Lider Nombre Primer_Apellido Segundo_Apellido");
             for (Requerimiento_3 rq : resultado) {
                 System.out.println(
-                        rq.getId_lider() + " " + 
-                        rq.getNombre() + " " + 
-                        rq.getPrimer_apellido() + " " + 
+                        rq.getId_lider() + "  " + 
+                        rq.getNombre() + "  " + 
+                        rq.getPrimer_apellido() + "  " + 
                         rq.getSegundo_apellido()
                 );
             }

@@ -25,6 +25,4 @@ public class Requerimiento_1 {
     public String getCiudad_residencia() {
         return ciudad_residencia;
     }
-
-
 }

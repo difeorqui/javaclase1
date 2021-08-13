@@ -32,7 +32,7 @@ public class Requerimiento1_Dao {
         cnn.close();
     }
     
-    public ArrayList<Requerimiento_1> consultar(){
+    public ArrayList<Requerimiento_1> requerimiento1(){
         ArrayList<Requerimiento_1> res = new ArrayList<>();
         
         String consulta = "select count(l.ID_Lider) numLideres, "+

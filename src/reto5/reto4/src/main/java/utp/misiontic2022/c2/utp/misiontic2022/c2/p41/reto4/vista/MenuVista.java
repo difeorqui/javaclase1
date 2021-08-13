@@ -121,7 +121,7 @@ public class MenuVista extends javax.swing.JFrame {
         // TODO add your handling code here:
         try {
             Requerimiento1_controller ctrl = new Requerimiento1_controller();
-            ArrayList<Requerimiento_1> resultado = ctrl.consultar();
+            ArrayList<Requerimiento_1> resultado = ctrl.requerimiento1();
             ctrl.close();
             Requerimiento1Vista vista = new Requerimiento1Vista();
             vista.CargarDatos(resultado);
@@ -135,7 +135,7 @@ public class MenuVista extends javax.swing.JFrame {
         // TODO add your handling code here:
         try {
             Requerimiento2_controller ctrl = new Requerimiento2_controller();
-            ArrayList<Requerimiento_2> resultado = ctrl.consultar();
+            ArrayList<Requerimiento_2> resultado = ctrl.requerimiento2();
             ctrl.close();
             Requerimiento2Vista vista = new Requerimiento2Vista();
             vista.CargarDatos(resultado);
@@ -149,7 +149,7 @@ public class MenuVista extends javax.swing.JFrame {
         // TODO add your handling code here:
         try {
             Requerimiento3_controller ctrl = new Requerimiento3_controller();
-            ArrayList<Requerimiento_3> resultado = ctrl.consultar();
+            ArrayList<Requerimiento_3> resultado = ctrl.requerimiento3();
             ctrl.close();
             Requerimiento3Vista vista = new Requerimiento3Vista();
             vista.CargarDatos(resultado);

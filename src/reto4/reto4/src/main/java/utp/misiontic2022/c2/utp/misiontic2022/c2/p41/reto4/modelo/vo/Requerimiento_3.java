@@ -37,8 +37,4 @@ public class Requerimiento_3 {
     public String getSegundo_apellido() {
         return segundo_apellido;
     }
-    
-    
-    
-    
 }

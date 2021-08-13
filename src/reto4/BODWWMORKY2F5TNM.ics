@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Calendly//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+DTSTAMP:20210813T015016Z
+UID:calendly-311852261
+DTSTART:20210813T120000Z
+DTEND:20210813T123000Z
+CLASS:PRIVATE
+DESCRIPTION:Event Name: 30 minutos\nEvent Description: Tutoria para aclarac
+ ión de dudas.\nDate & Time: 07:00am - 07:30am (Bogota\, Jamaica\, Lima Ti
+ me) on Friday\, August 13\, 2021\nLocation: This is a Google Meet web conf
+ erence.\nYou can join this meeting from your computer\, tablet\, or smartp
+ hone.\nhttps://calendly.com/events/FNBFAAUA3I26M36R/google_meet\n\nDuda a 
+ resolver: Reto 4 no carga en plataforma\, saca muchos errores y no veo com
+ o solucionarlos.\n\nNumero de documento: 94325212\n\nNumero de Grupo: 41\n
+ \nNombre del Formador: Juan Carlos Pérez Castillo\n\nNeed to make changes
+  to this event?\nCancel: https://calendly.com/cancellations/BODWWMORKY2F5T
+ NM\nReschedule: https://calendly.com/reschedulings/BODWWMORKY2F5TNM\n
+LOCATION:Google Meet (instructions in description)
+SUMMARY:30 minutos with Monica Suarez
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR

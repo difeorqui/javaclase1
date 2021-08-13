@@ -21,8 +21,8 @@ public class Requerimiento2_controller {
         this.ctrl = new Requerimiento2_Dao();
     }
     
-    public ArrayList<Requerimiento_2> consultar(){
-        return this.ctrl.consultar();
+    public ArrayList<Requerimiento_2> requerimiento2(){
+        return this.ctrl.requerimiento2();
     }
     
     public void close() throws SQLException{

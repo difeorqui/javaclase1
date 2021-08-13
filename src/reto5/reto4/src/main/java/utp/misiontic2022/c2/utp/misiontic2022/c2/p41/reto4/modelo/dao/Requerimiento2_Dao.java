@@ -32,7 +32,7 @@ public class Requerimiento2_Dao {
         cnn.close();
     }
     
-    public ArrayList<Requerimiento_2> consultar(){
+    public ArrayList<Requerimiento_2> requerimiento2(){
         ArrayList<Requerimiento_2> res = new ArrayList<>();
         
         String consulta = "select c.ID_Proyecto, c.Proveedor, c.Pagado, mc.ID_MaterialConstruccion, mc.Nombre_Material"+

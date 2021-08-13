@@ -10,10 +10,6 @@ import java.util.ArrayList;
 import utp.misiontic2022.c2.utp.misiontic2022.c2.p41.reto4.modelo.dao.Requerimiento2_Dao;
 import utp.misiontic2022.c2.utp.misiontic2022.c2.p41.reto4.modelo.vo.Requerimiento_2;
 
-/**
- *
- * @author Diego_Orozco
- */
 public class Requerimiento2_controller {
     private Requerimiento2_Dao ctrl;
 
@@ -21,8 +17,8 @@ public class Requerimiento2_controller {
         this.ctrl = new Requerimiento2_Dao();
     }
     
-    public ArrayList<Requerimiento_2> consultar(){
-        return this.ctrl.consultar();
+    public ArrayList<Requerimiento_2> requerimiento2(){
+        return this.ctrl.requerimiento2();
     }
     
     public void close() throws SQLException{

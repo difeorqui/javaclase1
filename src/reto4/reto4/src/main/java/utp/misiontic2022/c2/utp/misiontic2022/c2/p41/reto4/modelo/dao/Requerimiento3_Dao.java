@@ -13,10 +13,6 @@ import java.util.ArrayList;
 import utp.misiontic2022.c2.utp.misiontic2022.c2.p41.reto4.modelo.vo.Requerimiento_3;
 import utp.misiontic2022.c2.utp.misiontic2022.c2.p41.reto4.util.JDBCUtilities;
 
-/**
- *
- * @author Diego_Orozco
- */
 public class Requerimiento3_Dao {
     Connection cnn;
 
@@ -32,7 +28,7 @@ public class Requerimiento3_Dao {
         cnn.close();
     }
     
-    public ArrayList<Requerimiento_3> consultar(){
+    public ArrayList<Requerimiento_3> requerimiento3(){
         ArrayList<Requerimiento_3> res = new ArrayList<>();
         
             String consulta = "select distinct l.ID_Lider, l.Nombre, l.Primer_Apellido, l.Segundo_Apellido"+
@@ -56,6 +52,4 @@ public class Requerimiento3_Dao {
         }
         return res;
     }
-    
-    
 }

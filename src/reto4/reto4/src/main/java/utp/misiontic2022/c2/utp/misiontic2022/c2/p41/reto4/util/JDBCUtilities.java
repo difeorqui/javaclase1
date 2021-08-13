@@ -10,10 +10,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-/**
- *
- * @author Diego_Orozco
- */
 public class JDBCUtilities {
 
     //Atributos de clase para gestión de conexión con la base de datos      
@@ -32,7 +28,4 @@ public class JDBCUtilities {
         File archivo = new File(JDBCUtilities.UBICACION_BD);        
         return archivo.length() == 0;
     }
-
-    
-    
 }
